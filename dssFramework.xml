@@ -1,0 +1,1437 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+dssFramework
+</name>
+</assembly>
+<members>
+<member name="T:dssFramework.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:dssFramework.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:dssFramework.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:dssFramework.BaseFrameworkClass">
+ <summary>
+ Classe Base para as demais classes do Framework
+ </summary>
+</member>
+<member name="P:dssFramework.BaseFrameworkClass.oCI">
+ <summary>
+ Culture Info do Brasil para conversões de Dados
+ </summary>
+</member>
+<member name="F:dssFramework.BaseFrameworkClass._CIUs">
+ <summary>
+ Culture Info Americano para conversões de Dados
+ </summary>
+ <remarks>
+ Usado principalmente nas conversões de Decimais para o Banco de Dados
+ </remarks>
+</member>
+<member name="P:dssFramework.dssAjaxBasePage.myAjaxScriptManager">
+ <summary>
+ Referencia ao Ajax Script Manager da página
+ </summary>
+</member>
+<member name="M:dssFramework.dssAjaxBasePage.OnPreInit(System.EventArgs)">
+ <summary>
+ Inicializa os componentes de Ajax na pré-inicialização
+ </summary>
+ <param name="e">EventArgs passado pelo Framework</param>
+</member>
+<member name="M:dssFramework.dssAjaxBasePage.addClientScript(System.String,System.Object[])">
+ <summary>
+ Adiciona um comando JavaScript que será excecutado na próxima inicialização da Tela
+ </summary>
+ <param name="aScript">Script em JavaScript que será executado (sem as tags)</param>
+</member>
+<member name="M:dssFramework.dssAjaxBasePage.SubmitPage">
+ <summary>
+ Prividencia um submit assim que a página for carregada.
+ </summary>
+</member>
+<member name="P:dssFramework.dssBasePage.EvitaCache">
+ <summary>
+ Indica se a página deve invalidar o Cache do navegador
+ </summary>
+</member>
+<member name="P:dssFramework.dssBasePage.MainForm">
+ <summary>
+ Contém uma referência ao Form Principal da Página
+ </summary>
+</member>
+<member name="P:dssFramework.dssBasePage.oCI">
+ <summary>
+ Culture Info do Brasil para conversões de Dados
+ </summary>
+</member>
+<member name="F:dssFramework.dssBasePage._CIUs">
+ <summary>
+ Culture Info Americano para conversões de Dados
+ </summary>
+ <remarks>
+ Usado principalmente nas conversões de Decimais para o Banco de Dados
+ </remarks>
+</member>
+<member name="M:dssFramework.dssBasePage.addClientScript(System.String,System.Object[])">
+ <summary>
+ Adiciona um comando JavaScript que será excecutado na próxima inicialização da Tela
+ </summary>
+ <param name="aScript">Script em JavaScript que será executado (sem as tags)</param>
+</member>
+<member name="M:dssFramework.dssBasePage.Alert(System.String,System.Object[])">
+ <summary>
+ Exibe uma Caixa de Diálogo para o usuário
+ </summary>
+ <param name="aMessage">Texto para a caixa de diálogo</param>
+</member>
+<member name="M:dssFramework.dssBasePage.WindowClose">
+ <summary>
+ Fecha a janela atual
+ </summary>
+</member>
+<member name="M:dssFramework.dssBasePage.SubmitPage">
+ <summary>
+ Prividencia um submit assim que a página for carregada.
+ </summary>
+</member>
+<member name="M:dssFramework.dssBasePage.ScrollTo(System.Int32)">
+ <summary>
+ Reposiciona o scroll da Tela
+ </summary>
+ <param name="aDestination">Destino, em Pixels, da Scrollbar</param>
+</member>
+<member name="M:dssFramework.dssBasePage.ScrollTextareaToBottom(System.Web.UI.WebControls.TextBox@)">
+ <summary>
+ Força o posicionamento da scrollbar de uma TextBox para fim desta
+ </summary>
+ <param name="aTextarea">TextBox que terá a scrollbar reposicionada</param>
+ <remarks>
+ Funciona apenas em TextBoxes cujo parâmetro <c>TextMode = TextBoxMode.MultiLine</c>.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssBasePage.OpenModal(System.String,System.Int32,System.Int32)">
+ <summary>
+ Abre uma Janela Modal
+ </summary>
+ <param name="URL">URL da página que vai ser aberta</param>
+ <param name="Width">Largura da Janela Modal criada</param>
+ <param name="Height">Altura da Janela Modal criada</param>
+</member>
+<member name="M:dssFramework.dssBasePage.OpenModal(System.String,System.Int32,System.Int32,System.String)">
+ <summary>
+ Abre uma Janela Modal
+ </summary>
+ <param name="URL">URL da página que vai ser aberta</param>
+ <param name="Width">Largura da Janela Modal criada</param>
+ <param name="Height">Altura da Janela Modal criada</param>
+ <param name="aTitulo">Título da Janela Modal criada</param>
+</member>
+<member name="M:dssFramework.dssBasePage.OpenPopup(System.String,System.Int32,System.Int32)">
+ <summary>
+ Abre uma Janela PopUp Não Modal
+ </summary>
+ <param name="URL">URL da página que vai ser aberta</param>
+ <param name="Width">Largura da PopUp criada</param>
+ <param name="Height">Altura da PopUp criada</param>
+</member>
+<member name="T:dssFramework.DataAccess.dssOdbcDataAccess">
+ <summary>
+ Classe heradada de <see cref="T:dssFramework.DataAccess.dssDataAccess" />, com as definições específicas de acesso ODBC
+ </summary>
+</member>
+<member name="P:dssFramework.DataAccess.dssOdbcDataAccess.DSN">
+ <summary>
+ Usuário do Banco de Dados
+ </summary>
+</member>
+<member name="M:dssFramework.DataAccess.dssOdbcDataAccess.#ctor">
+ <summary>
+ Cria uma nova instância da Classe de Acesso ODBC
+ </summary>
+ <exception cref="T:System.Exception">
+ Qualquer chamada a este construtor resutará em falha, pois ele não define o DSN que será utilizado.
+ </exception>
+</member>
+<member name="M:dssFramework.DataAccess.dssOdbcDataAccess.#ctor(System.String)">
+ <summary>
+ Cria uma nova instância da Classe de Acesso ao Access
+ </summary>
+ <param name="aDSN"> Nome do DSN.</param>
+</member>
+<member name="M:dssFramework.DataAccess.dssOdbcDataAccess.getSpecificCommand">
+ <summary>
+ Define um comando específico ODBC
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.Odbc.OdbcCommand" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssOdbcDataAccess.getSpecificConnection">
+ <summary>
+ Define uma Conexão específica ODBC
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.Odbc.OdbcConnection" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssOdbcDataAccess.getSpecificDataAdapter(System.Data.IDbCommand)">
+ <summary>
+ Define um Data Adapter específica OODBC
+ </summary>
+ <param name="aCommand">OracleComand de Referência para criação do Data Adapter</param>
+ <returns>Uma nova instância de <see cref="T:System.Data.Odbc.OdbcDataAdapter" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssOdbcDataAccess.getSpecificReadOnlyConnection">
+ <summary>
+ Acesso somente leitura em ODBC não está implementado. Portanto, esta função apenas aponta para a função 
+ de conexão padrão.
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.Odbc.OdbcConnection" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssMdbOleDataAccess.#ctor">
+ <summary>
+ Cria uma nova instância da Classe de Acesso ao Access
+ </summary>
+ <exception cref="T:System.Exception">
+ Qualquer chamada a este construtor resutará em falha, pois ele não define o MDB que será utilizado.
+ </exception>
+</member>
+<member name="M:dssFramework.DataAccess.dssMdbOleDataAccess.#ctor(System.String,System.String)">
+ <summary>
+ Cria uma nova instância da Classe de Acesso ao Access
+ </summary>
+ <param name="aMDB"> Path para o arquivo MDB.</param>
+ <param name="aMdbPwd"> Senha do banco </param>
+</member>
+<member name="P:dssFramework.DataAccess.dssMdbOleDataAccess.MDB">
+ <summary>
+ Usuário do Banco de Dados
+ </summary>
+</member>
+<member name="P:dssFramework.DataAccess.dssMdbOleDataAccess.MdbPwd">
+ <summary>
+ Senha de acesso ao Banco de Dados
+ </summary>
+</member>
+<member name="T:dssFramework.DataAccess.dssOleDataAccess">
+ <summary>
+ Classe heradada de <see cref="T:dssFramework.DataAccess.dssDataAccess" />, com as definições específicas de acesso OLE
+ </summary>
+</member>
+<member name="M:dssFramework.DataAccess.dssOleDataAccess.getSpecificCommand">
+ <summary>
+ Define um comando específico OLE
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.OleDb.OleDbCommand" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssOleDataAccess.getSpecificConnection">
+ <summary>
+ Define uma Conexão específica OLE
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.OleDb.OleDbConnection" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssOleDataAccess.getSpecificDataAdapter(System.Data.IDbCommand)">
+ <summary>
+ Define um Data Adapter específica OLE
+ </summary>
+ <param name="aCommand">OracleComand de Referência para criação do Data Adapter</param>
+ <returns>Uma nova instância de <see cref="T:System.Data.OleDb.OleDbDataAdapter" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssOleDataAccess.getSpecificReadOnlyConnection">
+ <summary>
+ Acesso somente leitura em OLE não está implementado. Portanto, esta função apenas aponta para a função 
+ de conexão padrão.
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.OleDb.OleDbConnection" /></returns>
+</member>
+<member name="T:dssFramework.DataAccess.dssOracleDataAccess">
+ <summary>
+ Classe heradada de <see cref="T:dssFramework.DataAccess.dssDataAccess" />, com as definições específicas do Oracle
+ </summary>
+</member>
+<member name="M:dssFramework.DataAccess.dssOracleDataAccess.#ctor">
+ <summary>
+ Cria uma nova instância da Classe de Acesso ao Oracle
+ </summary>
+</member>
+<member name="M:dssFramework.DataAccess.dssOracleDataAccess.#ctor(System.String)">
+ <summary>
+ Cria uma nova instância da Classe de Acesso ao Oracle com um identificador de conexão específico
+ </summary>
+</member>
+<member name="P:dssFramework.DataAccess.dssOracleDataAccess.UserId">
+ <summary>
+ Usuário do Banco de Dados
+ </summary>
+</member>
+<member name="P:dssFramework.DataAccess.dssOracleDataAccess.UserPwd">
+ <summary>
+ Senha de acesso ao Banco de Dados
+ </summary>
+</member>
+<member name="M:dssFramework.DataAccess.dssOracleDataAccess.getSpecificCommand">
+ <summary>
+ Define um comando específico do Oracle
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.OracleClient.OracleCommand" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssOracleDataAccess.getSpecificConnection">
+ <summary>
+ Define uma Conexão específica do Oracle
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.OracleClient.OracleConnection" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssOracleDataAccess.getSpecificDataAdapter(System.Data.IDbCommand)">
+ <summary>
+ Define um Data Adapter específica do Oracle
+ </summary>
+ <param name="aCommand">OracleComand de Referência para criação do Data Adapter</param>
+ <returns>Uma nova instância de <see cref="T:System.Data.OracleClient.OracleConnection" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssOracleDataAccess.getSpecificReadOnlyConnection">
+ <summary>
+ Define uma Conexão específica do Oracle para acesso ao Banco "Somente Leitura"
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.OracleClient.OracleConnection" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssOracleDataAccess.PersistComandWithParameters(System.String)">
+ <summary>
+ Permite a Persistência de uma instrução SQL, já pegando seus parâmetros do Servidor Oracle
+ </summary>
+ <param name="strSQL">Instrução SQL (Stored Procedure) que será persistida</param>
+ <remarks>Neste caso, a String de Identificação do Banco será igual ao nome da Stored Procedure, 
+ e a utilizaçao do Banco de Leitura estará condicionada à definição obtida com o uso do Método <see cref="P:dssFramework.DataAccess.dssDataAccess.UseReadOnlyDbInNextCall" />
+ </remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssOracleDataAccess.PersistComandWithParameters(System.String,System.Boolean)">
+ <summary>
+ Permite a Persistência de uma instrução SQL, já pegando seus parâmetros do Servidor Oracle
+ </summary>
+ <param name="strSQL">Instrução SQL (Stored Procedure) que será persistida</param>
+ <param name="aUseReadOnlyDB">Define se o banco "Somente Leitura" será usado para a definição dos parâmetros</param>
+ <remarks>Neste caso, a String de Identificação do Banco será igual ao nome da Stored Procedure.</remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssOracleDataAccess.PersistComandWithParameters(System.String,System.String,System.Boolean)">
+ <summary>
+ Permite a Persistência de uma instrução SQL, já pegando seus parâmetros do Servidor Oracle
+ </summary>
+ <param name="strSQL">Instrução SQL (Stored Procedure) que será persistida</param>
+ <param name="aCommandID">String de Identificação do Comando, usada para Persistencia do meSMO.</param>
+ <param name="aUseReadOnlyDB">Define se o banco "Somente Leitura" será usado para a definição dos parâmetros</param>
+</member>
+<member name="T:dssFramework.DataAccess.dssDataAccess">
+ <summary>
+ Classe Base de Acesso a Dados
+ </summary>
+ <remarks>
+ Contém todas as funções e parâmetros de Acesso a dados, independente de provider.
+ <para>
+ As classes herdadas vão dar as características específicas de cada tipo de banco.
+ </para>
+ </remarks>
+ 
+</member>
+<member name="P:dssFramework.DataAccess.dssDataAccess.CommandTimeout">
+ <summary>
+ Tempo de Timeout da Conexão, em Segundos
+ </summary>
+ <remarks>
+ O valor padrão desta propriedade é de 600 segundos.
+ </remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.getSpecificConnection">
+ <summary>
+ Função que retorna a conexão específica para o tipo de Banco de Dados
+ </summary>
+ <returns>Objeto específico do banco que implemente IDbConnection</returns>
+ <remarks></remarks>
+</member>
+<member name="P:dssFramework.DataAccess.dssDataAccess.cnn">
+ <summary>
+ Retorna uma conexão com o banco de dados
+ </summary>
+ <returns>Uma interface do tipo IDbConnection para efetuar a conexão com o banco</returns>
+ <remarks>
+ Na primeira chamada, o tipo específico é criado e armazenado.
+ Nas chamadas subsequentes, a conexão armazenada é utilizada.
+ </remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.getSpecificReadOnlyConnection">
+ <summary>
+ Semelhante à <see cref="M:dssFramework.DataAccess.dssDataAccess.getSpecificConnection" />, mas para o banco de leitura.
+ </summary>
+ <returns>Objeto específico do banco que implemente IDbConnection</returns>
+ <remarks><seealso cref="M:dssFramework.DataAccess.dssDataAccess.getSpecificConnection" /></remarks>
+</member>
+<member name="P:dssFramework.DataAccess.dssDataAccess.ReadOnlyCnn">
+ <summary>
+ Semelhante à <see cref="P:dssFramework.DataAccess.dssDataAccess.cnn" />, mas para o banco de leitura.
+ </summary>
+ <returns>Uma interface do tipo IDbConnection para efetuar a conexão com o banco</returns>
+ <remarks>
+ Na primeira chamada, o tipo específico é criado e armazenado.
+ Nas chamadas subsequentes, a conexão armazenada é utilizada.
+ <seealso cref="P:dssFramework.DataAccess.dssDataAccess.cnn" />
+ </remarks>
+</member>
+<member name="P:dssFramework.DataAccess.dssDataAccess.HasOpenTransaction">
+ <summary>
+ Retorna se existe transação aberta.
+ </summary>
+ <returns><c>True</c> se houver transação aberta, <c>False</c> caso contrário.</returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.isConnectionOpen(System.Data.IDbConnection)">
+ <summary>
+ Verifica se a conexão passada em <paramref name="aConn" /> está aberta, ou
+ se a conexão da própria classe já foi aberta.
+ </summary>
+ <param name="aConn">
+ Conexão que será verificada. Caso seja <c>Nothing</c>, a conexão da própria classe será verificada.
+ </param>
+ <returns><c>True</c> se a conexão estiver aberta, <c>False</c> caso contrário.</returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.getSpecificCommand">
+ <summary>
+ Função que retorna o comando específica para o tipo de Banco de Dados
+ </summary>
+ <returns>Objeto específico do banco que implemente IDbCommand</returns>
+ <remarks><seealso cref="M:dssFramework.DataAccess.dssDataAccess.getSpecificConnection" /></remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.getSpecificDataAdapter(System.Data.IDbCommand)">
+ <summary>
+ Função que retorna o Data Adapter específico para o tipo de Banco de Dados
+ </summary>
+ <param name="aCommand">Comando base para a Criação do Data Adapter</param>
+ <returns>Objeto específico do banco que implemente IDbDataAdapter</returns>
+ <remarks><seealso cref="M:dssFramework.DataAccess.dssDataAccess.getSpecificConnection" /></remarks>
+</member>
+<member name="P:dssFramework.DataAccess.dssDataAccess.UseReadOnlyDbInNextCall">
+ <summary>
+ Determina se o banco de leitura será usado na próxima chamada.
+ </summary>
+ <returns><c>True</c> se o banco puder ser usado, <c>False</c> caso contrário.</returns>
+ <remarks>
+ Na definição da propriedade, é validado se o banco de leitura
+ está disponível na configuração atual
+ <seealso cref="P:dssFramework.DataAccess.dssDataAccess._ReadOnlyDbAvailable" />
+ </remarks>
+</member>
+<member name="P:dssFramework.DataAccess.dssDataAccess._ReadOnlyDbAvailable">
+ <summary>
+ Verifica nas variáveis de aplicação, se o banco de leitura está disponível
+ </summary>
+ <returns><c>CBool(HttpContext.Current.Application("UseReadOnlyDB"))</c></returns>
+ <remarks>Valor Padrão: false</remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.BeginTransaction">
+ <summary>
+ Inicia uma transação com o Banco de Dados
+ </summary>
+ <remarks>
+ A transação é iniciada apenas se não há transação aberta.
+ Caso a conexão esteja fechada, a mesma é aberta automaticamente.
+ <seealso cref="M:dssFramework.DataAccess.dssDataAccess.isConnectionOpen(System.Data.IDbConnection)" />
+ </remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.CommitTransaction">
+ <summary>
+ Conclui uma transação aberta.
+ </summary>
+ <exception cref="T:System.Exception">
+ Caso não exista transação aberta, a exceção generica é gerada.
+ <seealso cref="P:dssFramework.DataAccess.dssDataAccess.HasOpenTransaction" />
+ </exception>
+ <remarks>
+ Na conclusão da transação, os objetos são Disposed.
+ <seealso cref="M:dssFramework.DataAccess.dssDataAccess.Dispose" />
+ </remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.RollbackTransaction">
+ <summary>
+ Cancela uma transação aberta.
+ </summary>
+ <remarks>
+ Na conclusão da transação, os objetos são Disposed.
+ <seealso cref="M:dssFramework.DataAccess.dssDataAccess.Dispose" />
+ </remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.FillDataSet(System.Data.DataSet@,System.String,System.Data.CommandType,System.Collections.Generic.List{System.Data.IDbDataParameter},System.String)">
+ <summary>
+ Preenche um Dataset passado por Referência
+ </summary>
+ <param name="ds">O DataSet a ser preenchido</param>
+ <param name="strSQL">A instrução SQL que será efetuada no banco</param>
+ <param name="Type">Tipo da Instrução. Valor Padrão: <see cref="F:System.Data.CommandType.Text" /></param>
+ <param name="params">Parâmetros da Instrução. Valido apenas no caso de Stored Procedures</param>
+ <param name="aCommandID">String de Identificação do Comando, usada para Persistencia do meSMO.</param>
+ <remarks>
+ Caso seja passado <paramref name="aCommandID" />, os parâmetros da procedure serão persistidos na classe,
+ repetindo-se a cada chamada subsequente que o meSMO <paramref name="aCommandID" /> for passado.
+ <para>
+ Assim, este recurso torna-se útil em Procedures com grande quantidade de parâmetros, já que entre as chamadas
+ basta alterar o valor dos parâmetros variáveis no Array de parâmentros (<paramref name="params" />) que foi passado
+ por referência, ou usar a função <see cref="M:dssFramework.DataAccess.dssDataAccess.SetProcedureParameter(System.String,System.String,System.Object)" />.
+ </para>
+ <seealso cref="M:dssFramework.DataAccess.dssDataAccess.SetProcedureParameter(System.String,System.String,System.Object)" />
+ </remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.ExecuteDataSet(System.String,System.Data.CommandType,System.Collections.Generic.List{System.Data.IDbDataParameter},System.String)">
+ <summary>
+ Retorna um novo DataSet, valendo-se dos meSMOs recursos que o método <see cref="M:dssFramework.DataAccess.dssDataAccess.FillDataSet(System.Data.DataSet@,System.String,System.Data.CommandType,System.Collections.Generic.List{System.Data.IDbDataParameter},System.String)" />.
+ </summary>
+ <param name="strSQL">A instrução SQL que será efetuada no banco</param>
+ <param name="Type">Tipo da Instrução. Valor Padrão: <see cref="F:System.Data.CommandType.Text" /></param>
+ <param name="params">Parâmetros da Instrução. Valido apenas no caso de Stored Procedures</param>
+ <param name="aCommandID">String de Identificação do Comando, usada para Persistencia do meSMO.</param>
+ <returns>Um novo DataSet preenchido a partir da instrução passada em <paramref name="strSQL" /></returns>
+ <remarks><seealso cref="M:dssFramework.DataAccess.dssDataAccess.FillDataSet(System.Data.DataSet@,System.String,System.Data.CommandType,System.Collections.Generic.List{System.Data.IDbDataParameter},System.String)" /></remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.ExecuteDataReader(System.String,System.Data.CommandType,System.Collections.Generic.List{System.Data.IDbDataParameter},System.String)">
+ <summary>
+ Retorna um novo DataReader<see cref="M:dssFramework.DataAccess.dssDataAccess.FillDataSet(System.Data.DataSet@,System.String,System.Data.CommandType,System.Collections.Generic.List{System.Data.IDbDataParameter},System.String)" />.
+ </summary>
+ <param name="strSQL">A instrução SQL que será efetuada no banco</param>
+ <param name="Type">Tipo da Instrução. Valor Padrão: <see cref="F:System.Data.CommandType.Text" /></param>
+ <param name="params">Parâmetros da Instrução. Valido apenas no caso de Stored Procedures</param>
+ <param name="aCommandID">String de Identificação do Comando, usada para Persistencia do meSMO.</param>
+ <returns>Um novo DataReader pronto para leitura</returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.ExecuteNonQuery(System.String,System.Data.CommandType,System.Collections.Generic.List{System.Data.IDbDataParameter},System.String)">
+ <summary>
+ Executa uma Instrução SQL, sem DataSet ou dado pontual como retorno.
+ </summary>
+ <param name="strSQL">A instrução SQL que será efetuada no banco</param>
+ <param name="Type">Tipo da Instrução. Valor Padrão: <see cref="F:System.Data.CommandType.Text" /></param>
+ <param name="params">Parâmetros da Instrução. Valido apenas no caso de Stored Procedures</param>
+ <param name="aCommandID">String de Identificação do Comando, usada para Persistencia do meSMO.</param>
+ <returns>O número de linhas afetadas pela instrução passada em <paramref name="strSQL" /></returns>
+ <remarks>
+ Para informações sobre o funcionamento da persistência de comandos, ver <see cref="M:dssFramework.DataAccess.dssDataAccess.FillDataSet(System.Data.DataSet@,System.String,System.Data.CommandType,System.Collections.Generic.List{System.Data.IDbDataParameter},System.String)" />.
+ <seealso cref="M:dssFramework.DataAccess.dssDataAccess.FillDataSet(System.Data.DataSet@,System.String,System.Data.CommandType,System.Collections.Generic.List{System.Data.IDbDataParameter},System.String)" />
+ </remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.ExecuteScalar(System.String,System.Data.CommandType,System.Collections.Generic.List{System.Data.IDbDataParameter},System.String)">
+ <summary>
+ Executa uma instrução no banco de dados, e retorna um dado pontual.
+ </summary>
+ <param name="strSQL">A instrução SQL que será efetuada no banco</param>
+ <param name="Type">Tipo da Instrução. Valor Padrão: <see cref="F:System.Data.CommandType.Text" /></param>
+ <param name="params">Parâmetros da Instrução. Valido apenas no caso de Stored Procedures</param>
+ <param name="aCommandID">String de Identificação do Comando, usada para Persistencia do meSMO.</param>
+ <returns>O dado de retorno é obtido da primeira coluna da primeira linha do primeiro DataTable resultante da instrução definida em <paramref name="strSQL" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.SetProcedureParameter(System.String,System.String,System.Object)">
+ <summary>
+ Define um novo valor para um dos parâmetros do Comando Persistido
+ </summary>
+ <param name="aCommandID">A string de Identificação do Comando que foi persistido.</param>
+ <param name="aParamName">Nome do parâmetros que terá seu valor alterado.</param>
+ <param name="aValue">Novo valor do parâmetro referido.</param>
+ <returns><c>True</c> caso o Comando Persistido possua este parâmetro, <c>False</c> caso contrário.</returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.ClearProcedureParameters(System.String)">
+ <summary>
+ Define todos os parâmetros de um comando persistido como <c>DBNull.Value</c>
+ </summary>
+ <param name="aCommandID">A string de Identificação do Comando que foi persistido.</param>
+</member>
+<member name="M:dssFramework.DataAccess.dssDataAccess.Dispose">
+ <summary>
+ Realiza o Dispose da Classe.
+ </summary>
+ <remarks>
+ Esta função não só libera os recursos da memória, como Aplica um Rollback em transações ativas
+ e fecha conexões que estejam abertas.
+ </remarks>
+</member>
+<member name="T:dssFramework.DataAccess.dssSqlServerDataAccess">
+ <summary>
+ Classe heradada de <see cref="T:dssFramework.DataAccess.dssDataAccess" />, com as definições específicas do SQL Server
+ </summary>
+</member>
+<member name="M:dssFramework.DataAccess.dssSqlServerDataAccess.getSpecificCommand">
+ <summary>
+ Define um comando específico do SQL
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.SqlClient.SqlCommand" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssSqlServerDataAccess.getSpecificConnection">
+ <summary>
+ Define uma Conexão específica do SQL
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.SqlClient.SqlConnection" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssSqlServerDataAccess.getSpecificDataAdapter(System.Data.IDbCommand)">
+ <summary>
+ Define um Data Adapter específica do SQL
+ </summary>
+ <param name="aCommand">SQLComand de Referência para criação do Data Adapter</param>
+ <returns>Uma nova instância de <see cref="T:System.Data.SqlClient.SqlDataAdapter" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssSqlServerDataAccess.getSpecificReadOnlyConnection">
+ <summary>
+ Define uma Conexão específica do SQL para acesso ao Banco "Somente Leitura"
+ </summary>
+ <returns>Uma nova instância de <see cref="T:System.Data.SqlClient.SqlConnection" /></returns>
+</member>
+<member name="M:dssFramework.DataAccess.dssSqlServerDataAccess.PersistComandWithParameters(System.String)">
+ <summary>
+ Permite a Persistência de uma instrução SQL, já pegando seus parâmetros do Servidor SQL
+ </summary>
+ <param name="strSQL">Instrução SQL (Stored Procedure) que será persistida</param>
+ <remarks>Neste caso, a String de Identificação do Banco será igual ao nome da Stored Procedure, 
+ e a utilizaçao do Banco de Leitura estará condicionada à definição obtida com o uso do Método <see cref="P:dssFramework.DataAccess.dssDataAccess.UseReadOnlyDbInNextCall" />
+ </remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssSqlServerDataAccess.PersistComandWithParameters(System.String,System.Boolean)">
+ <summary>
+ Permite a Persistência de uma instrução SQL, já pegando seus parâmetros do Servidor SQL
+ </summary>
+ <param name="strSQL">Instrução SQL (Stored Procedure) que será persistida</param>
+ <param name="aUseReadOnlyDB">Define se o banco "Somente Leitura" será usado para a definição dos parâmetros</param>
+ <remarks>Neste caso, a String de Identificação do Banco será igual ao nome da Stored Procedure.</remarks>
+</member>
+<member name="M:dssFramework.DataAccess.dssSqlServerDataAccess.PersistComandWithParameters(System.String,System.String,System.Boolean)">
+ <summary>
+ Permite a Persistência de uma instrução SQL, já pegando seus parâmetros do Servidor SQL
+ </summary>
+ <param name="strSQL">Instrução SQL (Stored Procedure) que será persistida</param>
+ <param name="aCommandID">String de Identificação do Comando, usada para Persistencia do meSMO.</param>
+ <param name="aUseReadOnlyDB">Define se o banco "Somente Leitura" será usado para a definição dos parâmetros</param>
+</member>
+<member name="M:dssFramework.Extensions.dssValidadoresExtensions.IsCPFValido(System.String)">
+ <summary>
+ Validação de CPF
+ </summary>
+ <param name="aCPF">CPF a ser Validado, em formato de string</param>
+ <returns><c>True</c> caso o CPF esteja OK, ou <c>False</c> no caso contrário</returns>
+ <remarks>O parâmetro <paramref name="aCPF" /> pode ser passado com ou sem pontuações</remarks>
+</member>
+<member name="M:dssFramework.Extensions.dssValidadoresExtensions.IsCNPJValido(System.String)">
+ <summary>
+ Validação de CNPJ
+ </summary>
+ <param name="aCNPJ">CPF a ser Validado, em formato de string</param>
+ <returns><c>True</c> caso o CNPJ esteja OK, ou <c>False</c> no caso contrário</returns>
+ <remarks>O parâmetro <paramref name="aCNPJ" /> pode ser passado com ou sem pontuações</remarks>
+</member>
+<member name="T:dssFramework.dssControls.dssDatePicker">
+ <summary>
+ Controle Composto para criação de DateTextBox com opção de calendário para seleção.
+ </summary>
+ <remarks>
+ Este controle composto contém internamente um <see cref="T:dssFramework.dssControls.dssDateTextBox" /> e um <see cref="T:System.Web.UI.WebControls.ImageButton" />,
+ sendo que o último está programado para disparar uma popup com o calendário.
+ <para>
+ </para>
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssDatePicker.Text">
+ <summary>
+ Referencia o Texto contido no <see cref="T:dssFramework.dssControls.dssDateTextBox" /> interno.
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssDatePicker.Value">
+ <summary>
+ Retorna o valor, em DateTime, do texto inserido no <see cref="T:dssFramework.dssControls.dssDateTextBox" /> interno.
+ </summary>
+ <remarks><seealso cref="P:dssFramework.dssControls.dssDateTextBox.Value" /></remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssDatePicker.Width">
+ <summary>
+ Override da propriedade Width, ajustada para afetar o <see cref="T:dssFramework.dssControls.dssDateTextBox" /> interno.
+ </summary>
+</member>
+<member name="M:dssFramework.dssControls.dssDatePicker.OnInit(System.EventArgs)">
+ <summary>
+ Configurações Iniciais do Controle
+ </summary>
+ <param name="e">Event Args passado pelo Framework na Inicialização do Controle</param>
+ <remarks>
+ Durante a inicialização do controle, garante-se o registro dos Scripts necessários no ClientSide,
+ incluíndo os script necessários pelo <see cref="T:dssFramework.dssControls.dssDateTextBox" />.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssDatePicker.CreateChildControls">
+ <summary>
+ Função base de criação de controles filhos
+ </summary>
+ <remarks>
+ Instancia os controle internos, e dá a eles suas características padrão.
+ </remarks>
+</member>
+<member name="T:dssFramework.dssControls.dssBaseCompositeControl">
+ <summary>
+ Classe base para formação de CompositeControls
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssBaseCompositeControl.oCI">
+ <summary>
+ Culture Info do Brasil para conversões de Dados
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssBaseCompositeControl.oCIUs">
+ <summary>
+ Culture Info Americano para conversões de Dados
+ </summary>
+ <remarks>
+ Usado principalmente nas conversões de Decimais para o Banco de Dados
+ </remarks>
+</member>
+<member name="F:dssFramework.dssControls.dssBaseCompositeControl.IsUpdatePanelNeeded">
+ <summary>
+ Define se o controle deve estar dentro de um Ajax Update Panel para funcionar Corretamente.
+ </summary>
+ <remarks>O valor padrão desta variável é <c>False</c></remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssBaseCompositeControl.AjaxUpdatePanel">
+ <summary>
+ Aponta para a referência armazenada do UpdatePanel que contém o controle
+ </summary>
+ <remarks>A referência só é obtida a partir do evento <see cref="M:dssFramework.dssControls.dssBaseCompositeControl.CreateChildControls" /></remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssBaseCompositeControl.CreateChildControls">
+ <summary>
+ Função base de criação de controles filhos
+ </summary>
+ <exception cref="T:System.Exception">
+ Caso a definição do controle exija que o meSMO esteja contido em um Ajax Update Panel e,
+ ao buscar nos nós pai um container deste tipo não for encontrado, esta exceção será lançada.
+ </exception>
+ <remarks>
+ Nesta classe pai, caso seja declarado pela variável <see cref="F:dssFramework.dssControls.dssBaseCompositeControl.IsUpdatePanelNeeded" /> que 
+ o controle deve estar contido num Ajax Update Panel, o meSMO será buscado e uma referência
+ será armazenada internamente, podendo ser obtida através da propriedade <see cref="P:dssFramework.dssControls.dssBaseCompositeControl.AjaxUpdatePanel" />
+ </remarks>
+</member>
+<member name="T:dssFramework.dssControls.dssGridView.dssGridViewExpandMode">
+ <summary>
+ Enumeração de Possibilidades Para expanção da Linha de Detalhe
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.ExpandMode">
+ <summary>
+ Define o comportamento do Grid no momento da expanção da linha de detalhes
+ </summary>
+ <value>
+ <list type="table">
+ <listheader>
+ <term>Valor</term>
+ <description>Comportamento</description>
+ </listheader>
+ <item>
+ <term><see cref="F:dssFramework.dssControls.dssGridView.dssGridViewExpandMode.JavaScript" /> (Padrão)</term>
+ <description>
+ Todo processo de Expanção e Contração da linha de detalhe é feito em ClientSide
+ não onerando absolutamente o Servidor de Aplicação
+ </description>
+ </item>
+ <item>
+ <term><see cref="F:dssFramework.dssControls.dssGridView.dssGridViewExpandMode.CodeBehind" /></term>
+ <description>
+ Apesar do processo de exibição da linha de detalhe ser feito via JavaScript (ClientSide),
+ o grid irá disparar o evento <see cref="E:dssFramework.dssControls.dssGridView.DetailRowExpand" /> para toda linha que for expandida.
+ Já o processo de contração ocorre exclusivamente em ClientSide.
+ </description>
+ </item>
+ </list>
+ </value>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.DetailRowStartingState">
+ <summary>
+ Define o estado inicial das linhas de detalhe
+ </summary>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.DetailRow(System.Int32)">
+ <summary>
+ Retorna a linha de detalhe associada a uma linha do grid
+ </summary>
+ <param name="aRowIndex">Índice da linha no grid da qual se deseja obter a linha de detalhe</param>
+ <returns>Referência ao container do Template da Linha de Detalhe</returns>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.DetailsRowTemplate">
+ <summary>
+ Template da Linha de Detalhe
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.myChildTable">
+ <summary>
+ Referência à tabela html interna que é gerada na renderização do controle
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.ShowRowNumber">
+ <summary>
+ Define se será exibido o número da Linha no canto esquerdo do grid
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.RowHoverCssClass">
+ <summary>
+ Define classe CSS apliacada às linhas quando o mouse passa sobre as mesmas
+ </summary>
+</member>
+<member name="E:dssFramework.dssControls.dssGridView.Bind">
+ <summary>
+ Evento responsável pelo preenchimento do Grid
+ </summary>
+</member>
+<member name="E:dssFramework.dssControls.dssGridView.DetailRowDataBound">
+ <summary>
+ Evento Disparado no DataBind de cada uma das Linhas de Detalhe
+ </summary>
+</member>
+<member name="E:dssFramework.dssControls.dssGridView.DetailRowExpand">
+ <summary>
+ Evento Disparado no momento da Expanção da Linha de Detalhe
+ </summary>
+ <remarks>
+ Este evento só é disparado se a propriedade <see cref="P:dssFramework.dssControls.dssGridView.ExpandMode" /> for igual a <see cref="F:dssFramework.dssControls.dssGridView.dssGridViewExpandMode.CodeBehind" />.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.OnInit(System.EventArgs)">
+ <summary>
+ Configurações Iniciais do Controle
+ </summary>
+ <param name="e">Event Args passado pelo Framework na Inicialização do Controle</param>
+ <remarks>
+ Durante a inicialização do controle, garante-se o registro dos Scripts necessários no ClientSide,
+ incluíndo os scripts para identificação das Imagens de + e - contidas no Assembly.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.CarregarDados">
+ <summary>
+ Carrega os dados do Grid através do seu evento OnBind
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.CarregarDados(System.Boolean)">
+ <summary>
+ Carrega os dados do Grid através do seu evento OnBind
+ </summary>
+ <param name="aLimparOrdemEPaginacao">Zerar a paginação e a ordenação do Grid?</param>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.CarregarDados(System.Object,System.Boolean)">
+ <summary>
+ Carrega os dados do Grid através do DataSource especificado. ATENÇAO: Este Overload impossibilita a ordenação e paginação automáticas do grid! Dê preferência por outras sobrecargas que carregam o DataSource através do evento OnBind.
+ </summary>
+ <param name="aDataSource">DataSource a ser atribuído ao Grid</param>
+ <param name="aLimparOrdemEPaginacao">Zerar a paginação e a ordenação do Grid?</param>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.CreateColumns(System.Web.UI.WebControls.PagedDataSource,System.Boolean)">
+ <summary>
+ Função chamada na Criação de Colunas do Grid
+ </summary>
+ <param name="dataSource"><c>PagedDataSource</c> com os dados</param>
+ <param name="useDataSource">Indica se o DataSource especificado deve ser usado na criação das colunas</param>
+ <returns><c>ICollection</c> com as colunas criadas</returns>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.CreateChildControls(System.Collections.IEnumerable,System.Boolean)">
+ <summary>
+ Função base de criação de controles filhos
+ </summary>
+ <param name="dataSource"><c>PagedDataSource</c> com os dados</param>
+ <param name="dataBinding">Indica se o grid está em processo de DataBind</param>
+ <remarks>
+ Adiciona mais um hidden field filho ao conjunto de controles, que será utilizado para 
+ controlar o estado das Linhas de Detalhe via JavaScript
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.OnRowCreated(System.Web.UI.WebControls.GridViewRowEventArgs)">
+ <summary>
+ Função chamada a cada criação de Linha
+ </summary>
+ <param name="e">GridViewRowEventArgs passado pelo próprio Framework</param>
+ <remarks>
+ Define quais colunas / linhas especiais devem ser criadas, e inicializa seus parâmetros
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.OnRowDataBound(System.Web.UI.WebControls.GridViewRowEventArgs)">
+ <summary>
+ Evento que é disparado para cada linha do Grid após o processo de DataBind
+ </summary>
+ <param name="e">GridViewRowEventArgs passado pelo próprio Framework</param>
+ <remarks>
+ Neste ponto são chamadas as funções do evento <see cref="E:dssFramework.dssControls.dssGridView.DetailRowDataBound" /> caso seja necessário.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.PrepareControlHierarchy">
+ <summary>
+ Última Função do processo de criação do grid acessível neste nível de isolamento.
+ </summary>
+ <remarks>
+ Valendo-se do fato de que todo grid já está montado neste ponto, pode-se manipular as colunas / linhas
+ criadas para ajustar os Styles, Visible Status e Column Spans.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.btnExpand_Click(System.Object,System.Web.UI.ImageClickEventArgs)">
+ <summary>
+ Dispara o evento de <see cref="E:dssFramework.dssControls.dssGridView.DetailRowExpand" />.
+ </summary>
+ <param name="sender">Botão que disparou o evento</param>
+ <param name="e">ImageClickEventArgs passado pelo Framework</param>
+</member>
+<member name="T:dssFramework.dssControls.dssGridView.GridViewDetailRowEventArgs">
+ <summary>
+ Classe de Parâmtros pros eventos de DetailRowDataBound
+ </summary>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.GridViewDetailRowEventArgs.#ctor(System.Int32,System.Data.DataRow,dssFramework.dssControls.dssGridView.GridViewDetailRow)">
+ <summary>
+ Construtor da Classe
+ </summary>
+ <param name="aRowIndex">Índice da linha no grid referente à linha de detalhe em questão</param>
+ <param name="aData">DataRow com os dados desta linha específica </param>
+ <param name="aRow">Linha de Detalhe em questão</param>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.GridViewDetailRowEventArgs.RowIndex">
+ <summary>
+ Índice da linha no grid referente à linha de detalhe em questão
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.GridViewDetailRowEventArgs.Data">
+ <summary>
+ DataRow com os dados desta linha específica
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.GridViewDetailRowEventArgs.Row">
+ <summary>
+ Linha de Detalhe em questão
+ </summary>
+</member>
+<member name="T:dssFramework.dssControls.dssGridView.GridViewDetailRowExpandArgs">
+ <summary>
+ Classe de Parâmtros pros eventos de DetailRowExpand
+ </summary>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.GridViewDetailRowExpandArgs.#ctor(System.Int32,dssFramework.dssControls.dssGridView.GridViewDetailRow)">
+ <summary>
+ Construtor da Classe
+ </summary>
+ <param name="aRowIndex">Índice da linha no grid referente à linha de detalhe em questão</param>
+ <param name="aRow">Linha de Detalhe em questão</param>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.GridViewDetailRowExpandArgs.RowIndex">
+ <summary>
+ Índice da linha no grid referente à linha de detalhe em questão
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssGridView.GridViewDetailRowExpandArgs.Row">
+ <summary>
+ Linha de Detalhe em questão
+ </summary>
+</member>
+<member name="T:dssFramework.dssControls.dssGridView.GridViewDetailRow">
+ <summary>
+ Container para o template da Linha de Detalhes
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.GridViewDetailRow.#ctor">
+ <summary>
+ Contrutor Padrão
+ </summary>
+ <remarks>
+ Define o container como um DIV para fins de renderização
+ </remarks>
+</member>
+<member name="T:dssFramework.dssControls.dssGridView.dssGridViewExpandCellColumn">
+ <summary>
+ Coluna que contém o botão de expanção / contração
+ </summary>
+</member>
+<member name="F:dssFramework.dssControls.dssGridView.dssGridViewExpandCellColumn._ExpanderButtonID">
+ <summary>
+ ID do Botão de Expanção / Contração
+ </summary>
+</member>
+<member name="T:dssFramework.dssControls.dssGridView.dssGridViewExpandCellTemplateField">
+ <summary>
+ Template para armazenar o botão de expanção / contração
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.dssGridViewExpandCellTemplateField.InstantiateIn(System.Web.UI.Control)">
+ <summary>
+ Função chamada no momento da renderização do Template.
+ </summary>
+ <param name="container">Aponta quem será o container de renderização do Template</param>
+ <remarks>Instancia o botão no container</remarks>
+</member>
+<member name="T:dssFramework.dssControls.dssGridView.dssGridViewDetailsRowColumn">
+ <summary>
+ Coluna que contém as tags para quebra da linha na Tabela, e o container do Template da Linha de Detalhe
+ </summary>
+</member>
+<member name="F:dssFramework.dssControls.dssGridView.dssGridViewDetailsRowColumn._ExtraRowID">
+ <summary>
+ ID da linha extra criada
+ </summary>
+</member>
+<member name="F:dssFramework.dssControls.dssGridView.dssGridViewDetailsRowColumn._ExtraRowVoidCellID">
+ <summary>
+ ID da célula que se posiciona à esquerda da linha de detalhe
+ </summary>
+</member>
+<member name="F:dssFramework.dssControls.dssGridView.dssGridViewDetailsRowColumn._ExtraRowContainerCellID">
+ <summary>
+ ID Célula que contém o container principal do Template
+ </summary>
+</member>
+<member name="F:dssFramework.dssControls.dssGridView.dssGridViewDetailsRowColumn._ExtraRowDetailsContainerID">
+ <summary>
+ ID do container principal
+ </summary>
+</member>
+<member name="T:dssFramework.dssControls.dssGridView.dssGridViewTemplateField">
+ <summary>
+ Template para armazenar as tags extras e o Template definido no Grid
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.dssGridViewTemplateField.InstantiateIn(System.Web.UI.Control)">
+ <summary>
+ Função chamada no momento da renderização do Template.
+ </summary>
+ <param name="container">Aponta quem será o container de renderização do Template</param>
+ <remarks>Instancia o botão no container</remarks>
+</member>
+<member name="T:dssFramework.dssControls.dssGridView.dssGridViewRowNumberColumn">
+ <summary>
+ Coluna que contém o número da linha
+ </summary>
+</member>
+<member name="F:dssFramework.dssControls.dssGridView.dssGridViewRowNumberColumn._LabelID">
+ <summary>
+ ID do Label que vai exibir o número da linha
+ </summary>
+</member>
+<member name="T:dssFramework.dssControls.dssGridView.dssGridViewNumberCellTemplateField">
+ <summary>
+ Template para armazenar o número da linha
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssGridView.dssGridViewNumberCellTemplateField.InstantiateIn(System.Web.UI.Control)">
+ <summary>
+ Função chamada no momento da renderização do Template.
+ </summary>
+ <param name="container">Aponta quem será o container de renderização do Template</param>
+ <remarks>Instancia o botão no container</remarks>
+</member>
+<member name="T:dssFramework.dssControls.dssDropDownListFilterExtenderPosicionamentoHorizontal">
+ <summary>
+ Enumeração das possíveis posições do filtro, em relação à DropDownList alvo.
+ </summary>
+</member>
+<member name="T:dssFramework.dssControls.dssDropDownListFilterExtender">
+ <summary>
+ Classe de extensão que adiciona capacidade de filtro à uma DropDownList.
+ </summary>
+ <remarks>
+ Este objeto deve ser colocado no meSMO "nó" dentro da estrutura da página que seu alvo.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssDropDownListFilterExtender.#ctor">
+ <summary>
+ Construtor Padrão
+ </summary>
+ <remarks>
+ Nesta função define-se que o controle obrigatoriamente deve estar dentro de um Ajax Update Panel.
+ <seealso cref="F:dssFramework.dssControls.dssBaseCompositeControl.IsUpdatePanelNeeded" />
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssDropDownListFilterExtender.DropDownListID">
+ <summary>
+ ID da DropDownList que será filtrada pelo controle.
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssDropDownListFilterExtender.PosicionamentoVertical">
+ <summary>
+ Define a localização da caixa de filtro em relação ao DropDownList alvo.
+ </summary>
+ <remarks><seealso cref="T:dssFramework.dssControls.dssDropDownListFilterExtenderPosicionamentoHorizontal" /></remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssDropDownListFilterExtender.FilterText">
+ <summary>
+ Contém o Texto da TextBox interna do controle
+ </summary>
+</member>
+<member name="M:dssFramework.dssControls.dssDropDownListFilterExtender.OnInit(System.EventArgs)">
+ <summary>
+ Configurações Iniciais do Controle
+ </summary>
+ <param name="e">Event Args passado pelo Framework na Inicialização do Controle</param>
+ <remarks>
+ Durante a inicialização do controle, garante-se o registro dos Scripts necessários no ClientSide.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssDropDownListFilterExtender.CreateChildControls">
+ <summary>
+ Função base de criação de controles filhos
+ </summary>
+ <remarks>
+ Instancia os controle internos, e dá a eles suas características padrão.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssDropDownListFilterExtender.OnPreRender(System.EventArgs)">
+ <summary>
+ Configurações finais do controle antes da renderização.
+ </summary>
+ <param name="e">Event Args passado pelo Framework na fase de Pré-Renderização do Controle</param>
+ <remarks>
+ Define-se nesta fase os comportamentos de click dos botões internos.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssDropDownListFilterExtender.fnFilterClick(System.Object,System.Web.UI.ImageClickEventArgs)">
+ <summary>
+ Função para tratar os cliques dos botões internos
+ </summary>
+ <param name="sender">Botão que disparou o evento</param>
+ <param name="e">Event Args padrão para o evento</param>
+ <remarks>
+ A partir do conteúdo da TextBox (que pode ter sido limpo antes do submit pelo botão
+ "limpar filtro"), determina-se se devem ser liberados todos os items da DropDownList, ou 
+ se a mesma deve ser filtrada a partir dos dados digitados.
+ Neste evento também é ajusdada a cor de fundo do DropDownList, indicando seu estado.
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssImageButton.Hide">
+ <summary>
+ Define se o controle será escondido ou não.
+ </summary>
+ <remarks>
+ Diferente da propriedade Visible, neste caso o espaço que seria ocupado pelo botão fica vazio no flow do HTML.
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssImageButton.BackgroundColor">
+ <summary>
+ Define a Cor de Fundo do Botão
+ </summary>
+ <remarks>Padrão: <c>SystemColors.ButtonFace</c></remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssImageButton.Padding">
+ <summary>
+ Define a quantidade de Pixels entre a borda da imagem e a borda do botão
+ </summary>
+ <remarks>Padrão: 2 pixels</remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssImageButton.OnPreRender(System.EventArgs)">
+ <summary>
+ Configurações finais do controle antes da renderização.
+ </summary>
+ <param name="e">Event Args passado pelo Framework na fase de Pré-Renderização do Controle</param>
+ <remarks>
+ Define as propriedades físicas do botão, e comportamentos perante o mouse (ClientSide).
+ </remarks>
+</member>
+<member name="T:dssFramework.dssControls.dssDateTextBox">
+ <summary>
+ TextBox para imput de Datas no formato dd/MM/yyyy
+ </summary>
+ <remarks>
+ Nas configurações atuais, é obrigatória a digitação dos 8 digitos que compõe a data
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssDateTextBox.Value">
+ <summary>
+ Retorna o Valor, em DateTime, da data digitada.
+ </summary>
+ <returns>
+ <c>DateTime.MinValue</c> se a Data estiver vazia ou não for válida, ou a Data obtida a partir do texto.
+ </returns>
+</member>
+<member name="M:dssFramework.dssControls.dssDateTextBox.OnPreRender(System.EventArgs)">
+ <summary>
+ Configurações finais do controle antes da renderização.
+ </summary>
+ <param name="e">Event Args passado pelo Framework na fase de Pré-Renderização do Controle</param>
+ <remarks>
+ Durante esta fase, define-se os eventos customizados para KeyPress e Blur, além de definir o Width Padrão e o MaxLength. 
+ </remarks>
+</member>
+<member name="T:dssFramework.dssControls.enmDssMaskedTextBoxMaskType">
+ <summary>
+ Enumeração com Tipos de Máscara disponíveis para o controle <see cref="T:dssFramework.dssControls.dssMaskedTextBox" />
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssMaskedTextBox.Mask">
+ <summary>
+ Define o Tipo de Máscara para o controle.
+ </summary>
+ <remarks>
+ <seealso cref="T:dssFramework.dssControls.enmDssMaskedTextBoxMaskType" />
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssMaskedTextBox.OnPreRender(System.EventArgs)">
+ <summary>
+ Configurações finais do controle antes da renderização.
+ </summary>
+ <param name="e">Event Args passado pelo Framework na fase de Pré-Renderização do Controle</param>
+ <remarks>
+ Durante esta fase, define-se os eventos customizados para KeyPress e Blur, de acordo com a máscara. 
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssNumberTextBox.CasasDecimais">
+ <summary>
+ Define quantas casas decimais o controle aceitará no input.
+ </summary>
+ <remarks>
+ Caso o valor seja igual a <c>0</c> (padrão), não serão admitidas casas decimais.
+ Caso seja menor que zero, serão permitidas casas decimais sem qualquer tipo de controle.
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssNumberTextBox.PermiteNegativos">
+ <summary>
+ Define se o controle aceitará valores negativos no input
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssNumberTextBox.MinValue">
+ <summary>
+ Define o valor mínimo que pode ser inserido no controle.
+ </summary>
+ <remarks>
+ A validação desta regra é feita no evento OnBlur, via ClientSide
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssNumberTextBox.MaxValue">
+ <summary>
+ Define o valor Máximo que pode ser inserido no controle.
+ </summary>
+ <remarks>
+ A validação desta regra é feita no evento OnBlur, via ClientSide
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssNumberTextBox.Value">
+ <summary>
+ Retorna o Valor, em Decimal, da data digitada.
+ </summary>
+ <returns>
+ <c>Decimal.MinValue</c> se o texto estiver vazio ou não for um decimal válido, ou o Decimal obtido a partir do texto.
+ </returns>
+</member>
+<member name="M:dssFramework.dssControls.dssNumberTextBox.OnPreRender(System.EventArgs)">
+ <summary>
+ Configurações finais do controle antes da renderização.
+ </summary>
+ <param name="e">Event Args passado pelo Framework na fase de Pré-Renderização do Controle</param>
+ <remarks>
+ Durante esta fase, define-se os eventos customizados para KeyPress, KeyUp e Blur, além de definir o alinhamento do texto à direita. 
+ </remarks>
+</member>
+<member name="F:dssFramework.dssControls.dssRichTextBox.constButtonsViewStateKey">
+ <summary>
+ Botões Que serão exibidos (função inibida se FullPanel = True)
+ </summary>
+ <remarks>
+ Declarar os botões separados por vírgula, dentro das seguintes opções:
+ 'bold'
+ 'italic'
+ 'underline'
+ 'left'
+ 'center'
+ 'right'
+ 'justify'
+ 'ol' (Numeração)
+ 'ul' (Marcadores)
+ 'fontSize'
+ 'fontFamily'
+ 'fontFormat'
+ 'indent'
+ 'outdent'
+ 'link'
+ 'unlink'
+ 'forecolor'
+ 'bgcolor'
+ 'subscript'
+ 'superscript'
+ 'strikethrough'
+ 'removeformat'
+ 'hr'
+ </remarks>
+</member>
+<member name="T:dssFramework.dssControls.dssTextBox">
+ <summary>
+ Classe Base para as implementações de TextBox Customizadas
+ </summary>
+</member>
+<member name="P:dssFramework.dssControls.dssTextBox.oCI">
+ <summary>
+ Culture Info do Brasil para conversões de Dados
+ </summary>
+</member>
+<member name="M:dssFramework.dssControls.dssTextBox.OnInit(System.EventArgs)">
+ <summary>
+ Configurações Iniciais do Controle
+ </summary>
+ <param name="e">Event Args passado pelo Framework na Inicialização do Controle</param>
+ <remarks>
+ Durante a inicialização do controle, garante-se o registro dos Scripts necessários no ClientSide.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssTextBox.OnLoad(System.EventArgs)">
+ <summary>
+ Carregamento do controle
+ </summary>
+ <param name="e">Event Args passado pelo Framework na fase de carregamento do Controle</param>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssControls.dssTextBox.OnPreRender(System.EventArgs)">
+ <summary>
+ Configurações finais do controle antes da renderização.
+ </summary>
+ <param name="e">Event Args passado pelo Framework na fase de Pré-Renderização do Controle</param>
+ <remarks>
+ Durante esta fase, define-se os eventos customizados para KeyPress, KeyUp e Blur, definidos nas classes filhas. 
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssTimeTextBox.Mask">
+ <summary>
+ Define o Tipo de Máscara para o controle.
+ </summary>
+ <remarks>
+ <seealso cref="T:dssFramework.dssControls.enmDssTimeTextBoxMask" />
+ </remarks>
+</member>
+<member name="P:dssFramework.dssControls.dssTimedClick.dssImageButtonID">
+ <summary>
+ ID do botão que será disparado pelo controle.
+ </summary>
+</member>
+<member name="M:dssFramework.dssDNE.GetPais(System.Int32,System.Boolean,System.Boolean,dssFramework.dssDNE.enmBanco)">
+ <summary>
+ Obtém uma lista de paises ou nacionalidades.
+ </summary>
+ <param name="aCodigoPais">Recebe codigo do pais</param>
+ <param name="aOrdemPorCodigo">Ordem por codigo do pais</param>
+ <param name="aOrdemPorNacionalidade">Ordem por nacionalidade</param>
+ <param name="aBanco">Banco a conectar</param>
+ <returns>Uma lista da classe MDL_PAIS</returns>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssDNE.GetEstado(System.Int32,System.Int32,System.Boolean,dssFramework.dssDNE.enmBanco)">
+ <summary>
+ Pesquisa no banco de dados, estados.
+ </summary>
+ <param name="aCodigoPais">Recebe codigo do pais</param>
+ <param name="aCodigoEstado">Recebe codigo do estado</param>
+ <param name="aOrdemPorCodigo">Ordem por codigo do estado</param>
+ <param name="aBanco">Banco a conectar</param>
+ <returns>Uma lista da classe MDL_ESTADO</returns>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssDNE.GetLocalidade(System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,dssFramework.dssDNE.enmBanco)">
+ <summary>
+ Pesquisa no banco de dados, localidades.
+ </summary>
+ <param name="aCodigoPais">Recebe codigo do pais</param>
+ <param name="aCodigoEstado">Recebe codigo do estado</param>
+ <param name="aCodigoLocalidade">Recebe codigo da localidade</param>
+ <param name="aOrdemPorCodigo">Ordem por codigo da localidade</param>
+ <param name="aCodigoIBGE">Recebe codigo IBGE</param>
+ <param name="aBanco">Banco a conectar</param>
+ <returns>Uma lista da classe MDL_LOCALIDADE</returns>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssDNE.GetBairro(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,dssFramework.dssDNE.enmBanco)">
+ <summary>
+ Pesquisa no banco de dados, bairros.
+ </summary>
+ <param name="aCodigoPais">Recebe codigo do pais</param>
+ <param name="aCodigoEstado">Recebe codigo do estado</param>
+ <param name="aCodigoLocalidade">Recebe codigo da localidade</param>
+ <param name="aCodigoBairro">Recebe codigo do bairro</param>
+ <param name="aOrdemPorCodigo">Ordem por codigo da localidade</param>
+ <param name="aBanco">Banco a conectar</param>
+ <returns>Uma lista da classe MDL_BAIRRO</returns>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssDNE.GetCEP(System.Int32,dssFramework.dssDNE.enmBanco)">
+ <summary>
+ Pesquisa no banco de dados, CEP.
+ </summary>
+ <param name="aCodigoCEP">Recebe codigo do CEP</param>
+ <param name="aBanco">Banco a conectar</param>
+ <returns>Uma lista da classe MDL_CEP</returns>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssDNE.GetCEPLogradouro(System.String,System.String,System.String,System.String,dssFramework.dssDNE.enmBanco)">
+ <summary>
+ Pesquisa no banco de dados, Logradouro.
+ </summary>
+ <param name="aNomeLogradouro">Recebe o nome do Logradouro</param>
+ <param name="aNomeBairro">Recebe o nome do Bairro</param>
+ <param name="aNomeMunicipio">Recebe o nome do Municipio</param>
+ <param name="aSiglaEstado">Recebe a sigla do Estado</param>
+ <param name="aBanco">Banco a conectar</param>
+ <returns>Uma lista da classe MDL_CEP</returns>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssCNAE.GetCNAENivel(dssFramework.NivelCNAE,System.Boolean,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Pesquisa no banco de dados, CNAE.
+ </summary>
+ <param name="vNivelCNAE">Recebe qual o Nivel</param>
+ <param name="vNivelSomente">Recebe se a pesquisa é somente o nivel</param>
+ <param name="vCodigoSecao">Recebe codigo da seção</param>
+ <param name="vCodigoDivisao">Recebe codigo da divisão - 00 </param>
+ <param name="vCodigoGrupo">Recebe codigo da grupo - 000 </param>
+ <param name="vCodigoClasse">Recebe codigo da classe - 00000 </param>
+ <param name="vCodigoSubClasse">Recebe codigo da sub-classe - 0000000 </param>
+ <returns>Uma lista da classe MDL_CNAE</returns>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssOracleConnect.Connect">
+ <summary>
+ Conecta ao banco de dados. 
+ </summary>
+ <returns>Um objeto da classe dssOracleDataAccess</returns>
+ <remarks></remarks>
+</member>
+<member name="M:dssFramework.dssEncryption.dssEncryption.FnEncrypt(System.String)">
+ <summary>
+ Rotina de Criptografia de Dados
+ </summary>
+ <param name="pString">String que será criptografada / Descriptografada</param>
+ <remarks>
+ Esta única função atua tanto na criptografia quanto na descriptografia de uma string, alternando o estado desta.
+ <para>
+ IMPORTANTE: A string criptografada é valida apenas para o meSMO dia.
+ </para>
+ </remarks>
+</member>
+<member name="M:dssFramework.dssEncryption.dssEncryption.FnEncChar(System.Char)">
+ <summary>
+ Criptografa um único caractere
+ </summary>
+ <param name="aChar">Caractere que será criptografado</param>
+ <remarks>
+ IMPORTANTE: O caractere criptografado é valido apenas para o meSMO dia.
+ </remarks>
+</member>
+<member name="M:dssFramework.dssPDF.Merge(System.IO.MemoryStream[])">
+ <summary>
+ Mescla dois ou mais arquivos PDFs
+ </summary>
+ <param name="aArquivos">Arquivos que serão mesclados</param>
+ <returns>Novo arquivo mesclado</returns>
+ <remarks></remarks>
+</member>
+<member name="T:dssFramework.dssValidadores.dssValidadores">
+ <summary>
+ Classe com Funções de Validação
+ </summary>
+</member>
+</members>
+</doc>
